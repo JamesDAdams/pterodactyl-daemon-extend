@@ -1,5 +1,5 @@
 FROM ccarney16/pterodactyl-daemon
 CMD apt add zip
 CMD apt add unzip
-VOLUME /config
+VOLUME /srv/daemon/config
 CMD echo "Build succes"
