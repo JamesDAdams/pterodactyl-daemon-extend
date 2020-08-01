@@ -1,7 +1,5 @@
 
-FROM ccarney16/pterodactyl-daemon:latest
+FROM FROM debian:9
 
 MAINTAINER pterodactylDaemon <jamesadamspub@gmail.com>
 
-RUN apk add zip
-RUN apk add unzip
