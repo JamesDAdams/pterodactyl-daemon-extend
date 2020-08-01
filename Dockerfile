@@ -1,2 +1,4 @@
 FROM ccarney16/pterodactyl-daemon
-CMD echo "Hello world! This is my first Docker image."
+apk add zip
+apk add unzip
+CMD echo "Build succes"
