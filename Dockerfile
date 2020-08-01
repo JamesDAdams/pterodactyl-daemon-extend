@@ -8,7 +8,9 @@ ENV DAEMON_VERSION=v0.6.13 \
 WORKDIR /srv/daemon
 
 RUN \
- apk --update --no-cache add coreutils curl openssl make gcc g++ python gnupg tar \
+ apk add zip \
+ && apk add unzip \
+ && apk --update --no-cache add coreutils curl openssl make gcc g++ python gnupg tar \
  && curl -Lo daemon.tar.gz https://github.com/Pterodactyl/Daemon/archive/v0.6.13.tar.gz \
  && tar --strip-components=1 -xzvf daemon.tar.gz \
  && rm -f daemon.tar.gz \
