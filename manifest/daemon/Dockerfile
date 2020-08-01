@@ -4,7 +4,7 @@ MAINTAINER Cameron Carney <ccarney16@live.com>
 
 ARG VERSION
 
-ENV DAEMON_VERSION=${VERSION} \
+ENV DAEMON_VERSION=v0.6.13 \
     UID=500
 
 WORKDIR /srv/daemon
