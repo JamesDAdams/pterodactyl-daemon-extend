@@ -1,5 +1,2 @@
-
-FROM FROM debian:9
-
-MAINTAINER pterodactylDaemon <jamesadamspub@gmail.com>
-
+FROM busybox
+CMD echo "Hello world! This is my first Docker image."
