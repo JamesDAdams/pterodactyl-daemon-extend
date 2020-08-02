@@ -1,6 +1,6 @@
 FROM node:8-alpine
 
-MAINTAINER Cameron Carney <ccarney16@live.com>
+MAINTAINER JamesAdams <jamesadams@noemail.com>
 
 ARG VERSION
 
@@ -10,7 +10,9 @@ ENV DAEMON_VERSION=v0.6.13 \
 WORKDIR /srv/daemon
 
 RUN \
- apk --update --no-cache add coreutils curl openssl make gcc g++ python gnupg tar \
+ apk add zip \
+ && apk add unzip \
+ && apk --update --no-cache add coreutils curl openssl make gcc g++ python gnupg tar \
  && curl -Lo daemon.tar.gz https://github.com/Pterodactyl/Daemon/archive/${DAEMON_VERSION}.tar.gz \
  && tar --strip-components=1 -xzvf daemon.tar.gz \
  && rm -f daemon.tar.gz \
